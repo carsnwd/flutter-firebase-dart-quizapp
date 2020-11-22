@@ -11,13 +11,10 @@ class MyApp extends StatelessWidget {
   /// Build is similar to JSX React render function
   @override
   Widget build(BuildContext context) {
+    /// MaterialApp is just the root app context for a Flutter app, it defines things like routes, themes, analytics etc.
     return MaterialApp(
-      home: Scaffold(
-        body: Center(
-          ///Flutter can use default UI and switch between Android Material or iOS Cupertino depending on the platform.
-          child: Platform.isAndroid ? Switch(value: true, onChanged: (v) => null) : CupertinoSwitch(value: true, onChanged: (v) => null)
-        ),
-      ),
+      theme: ThemeData(brightness: Brightness.dark), //defines just theme data
+      home: Scaffold(), //this is a route, more later
     );
   }
 }
