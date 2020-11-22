@@ -14,18 +14,18 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Container(
-            width: 100,
-            height: 100,
-            decoration: BoxDecoration(
-                color: Colors.blue,
-                shape: BoxShape.circle,
-                /*border: Border.all(width: 5, color: Colors.green),
-                boxShadow: [
-                  BoxShadow(offset: Offset(20, 20), color: Colors.pink),
-                  BoxShadow(offset: Offset(20, 20), color: Colors.yellow)
-                ]*/
-                gradient: LinearGradient(colors: [Colors.yellow, Colors.green])),
+          child: Expanded(
+            child: Text(
+              "Hello World this is too long",
+              ///You can define a theme to use in a text from the context...
+              style: Theme.of(context).textTheme.headline3
+              /// Or manually create your own.
+              /*overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                    color: Colors.purple,
+                    fontSize: 50,
+                    fontWeight: FontWeight.bold)*/
+            ),
           ),
         ),
       ),
