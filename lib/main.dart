@@ -12,39 +12,21 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     /// MaterialApp is just the root app context for a Flutter app, it defines things like routes, themes, analytics etc.
     return MaterialApp(
-      // //Centering a widget
-      // home: Scaffold(
-      //   appBar: AppBar(title: Text("My Cool App")),
-      //   body: Center(
-      //     child: Icon(Icons.cake),
-      //   ),
-      // ),
-
-      // //Align widget
-      // home: Scaffold(
-      //   appBar: AppBar(title: Text("My Cool App")),
-      //   body: Align(
-      //     alignment: Alignment.centerRight,
-      //     child: Icon(Icons.cake),
-      //   ),
-      // ),
-
-      // //Padding widget - Uses EdgeInsets to define which padding and pixels
-      // home: Scaffold(
-      //   appBar: AppBar(title: Text("My Cool App")),
-      //   body: Padding(
-      //     padding: const EdgeInsets.all(8.0),
-      //     child: Icon(Icons.cake),
-      //   ),
-      // ),
-
-      //Container widget can combine many layout widgets into one, but not as readable
       home: Scaffold(
-        appBar: AppBar(title: Text("My Cool App")),
-        body: Container(
-          alignment: Alignment.center,
-          padding: const EdgeInsets.all(8.0),
-          child: Icon(Icons.cake),
+        body: Center(
+          child: Container(
+            width: 100,
+            height: 100,
+            decoration: BoxDecoration(
+                color: Colors.blue,
+                shape: BoxShape.circle,
+                /*border: Border.all(width: 5, color: Colors.green),
+                boxShadow: [
+                  BoxShadow(offset: Offset(20, 20), color: Colors.pink),
+                  BoxShadow(offset: Offset(20, 20), color: Colors.yellow)
+                ]*/
+                gradient: LinearGradient(colors: [Colors.yellow, Colors.green])),
+          ),
         ),
       ),
     );
