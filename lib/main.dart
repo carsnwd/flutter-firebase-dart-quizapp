@@ -13,8 +13,18 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     /// MaterialApp is just the root app context for a Flutter app, it defines things like routes, themes, analytics etc.
     return MaterialApp(
-      theme: ThemeData(brightness: Brightness.dark), //defines just theme data
-      home: Scaffold(), //this is a route, more later
+      /// Scaffold can be used as a blank canvas but scaffold out things like drawers, floating actions, etc.
+      home: Scaffold(
+        appBar: AppBar(title: Text("My Cool App")),
+        body: Center(
+          child: Icon(Icons.cake),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+        ),
+        drawer: Drawer(),
+        bottomNavigationBar: BottomAppBar(),
+      ),
     );
   }
 }
